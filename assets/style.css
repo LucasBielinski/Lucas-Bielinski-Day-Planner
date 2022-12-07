@@ -12,7 +12,7 @@ textarea {
   padding: 10px;
 }
 
-.description {
+.desc {
   white-space: pre-wrap;
 }
 
@@ -24,7 +24,7 @@ textarea {
   border-top: 1px solid white;
 }
 
-.hour {
+.time {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -45,7 +45,7 @@ textarea {
   color: white;
 }
 
-.saveBtn {
+.submit {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -53,7 +53,7 @@ textarea {
   color: white;
 }
 
-.saveBtn i:hover {
+.submit i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
