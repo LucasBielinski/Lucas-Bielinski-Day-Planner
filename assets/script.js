@@ -3,7 +3,7 @@ var descInput = $('desc')
 var timeArea = $('time-block')
 var hours = $('time')
 var currentTime = dayjs().format('HH')
-var tasks = [{hour: '8'},{hour: 9}, {hour: 10}, {hour: 11}, {hour: 12}, {hour: 1}, {hour: 2}, {hour: 3}, {hour: 4}, {hour: 5}] 
+var tasks = [{hour: '8'},{hour: '9'}, {hour: '10'}, {hour: '11'}, {hour: '12'}, {hour: '1'}, {hour: '2'}, {hour: '3'}, {hour: '4'}, {hour: '5'}] 
 
 
 $(function () {
