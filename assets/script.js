@@ -1,8 +1,9 @@
 var save = $('#sbmit')
 var descInput = $('desc')
-var timeArea = $('.time-block')
-var hours = $('.time')
-var currentTime = dayjs()
+var timeArea = $('time-block')
+var hours = $('time')
+var currentTime = dayjs().format('HH')
+var tasks = [{hour: '8'},{hour: 9}, {hour: 10}, {hour: 11}, {hour: 12}, {hour: 1}, {hour: 2}, {hour: 3}, {hour: 4}, {hour: 5}] 
 
 
 $(function () {
@@ -14,11 +15,11 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage? 
   //
-if (hours < currentTime.format('HH')){
+if (hours < currentTime){
   timeArea.attr({"class": "past"})
-} else if (hours === currentTime.format('HH')){
+} else if (hours === currentTime){
   timeArea.attr({'class':'present'})
-} else if (hours > currentTime.format('HH')){
+} else if (hours > currentTime){
   timeArea.attr({'class': 'future'})
 }
 
@@ -30,30 +31,33 @@ if (hours < currentTime.format('HH')){
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  var description = descInput.value
-
+  
   function calltasks() {
-    var tasks = localStorage.getItem(description)
+    var tasks = localStorage.getItem("description")
     if (tasks) {
-      tasks = (tasks)
+      tasks = JSON.parse(tasks)
     } else {
       tasks = []
     }
   }
-
-function savetasks(tasks) {
-localStorage.setItem(description, tasks)
-  }
-
-  save.on('click', savetasks); {
-    var taskIndex = ($(this).siblings("desc").attr("sumbit"))
-    console.log(taskIndex)
-  }
-
   
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
+  function savetasks() {
+    var description = {
+      hour:($(this).parent().attr("data-hour")),
+      name:($(this).prev(".desc").val())
+    }
+    for (i=0; i< tasks.length; i++) {
+      if (tasks[i].hour === description.hour){
+        tasks[i] = description
+        break
+      }
+    }
+  localStorage.setItem("description", JSON.stringify(tasks))
+}
+
+  save.on('click', savetasks); 
+
   var today = dayjs().format('dddd, DD, YYYY')
   $('#currentDay').text('today is ' +today+ ' !')
 });
+
