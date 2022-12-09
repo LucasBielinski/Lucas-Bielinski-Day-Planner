@@ -1,7 +1,7 @@
 var save = $('#sbmit')
 var descInput = $('desc')
 var timeArea = $('time-block')
-var hours = $('time')
+var hours = ($(this).parent().attr("data-hour"))
 var currentTime = dayjs().format('HH')
 var tasks = [{hour: '8'},{hour: '9'}, {hour: '10'}, {hour: '11'}, {hour: '12'}, {hour: '1'}, {hour: '2'}, {hour: '3'}, {hour: '4'}, {hour: '5'}] 
 
@@ -30,7 +30,7 @@ if (hours < currentTime){
       hour:($(this).parent().attr("data-hour")),
       name:($(this).prev(".desc").val())
     }
-    for (i=0; i< tasks.length; i++) {
+    for (i=0; i < tasks.length; i++) {
       if (tasks[i].hour === description.hour){
         tasks[i] = description
         break
