@@ -13,12 +13,6 @@ The times sections change color based on the current time. To save your tasks, c
 ![image of project](./assets/images/screen.png)
 
 ## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
+N/A
 ## License
-
+N/A
