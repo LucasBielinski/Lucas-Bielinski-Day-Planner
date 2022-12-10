@@ -45,6 +45,11 @@ for(let i=0; i< save.length; i++ ){
 console.log(currentTime)
 // saved task
 var savedTask = JSON.parse(localStorage.getItem("description"))
+if (!savedTask) {
+  savedTask = tasks
+}
+console.log(savedTask)
+
 
 // for loop compares every hour
 for(let i=0; i< textAreas.length; i++){
