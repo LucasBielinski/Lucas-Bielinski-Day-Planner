@@ -6,6 +6,8 @@ console.log(hours)
 var currentTime = dayjs().format('HH')
 var tasks = [{hour: '8', name:""},{hour: '9', name:""}, {hour: '10', name:""}, {hour: '11', name:""}, {hour: '12', name: ""}, {hour: '1', name:''}, {hour: '2', name: ''}, {hour: '3', name:''}, {hour: '4', name:''}, {hour: '5', name:''}] 
 
+$(function() {
+  // put code here
 
 // dayJS
   var today = dayjs().format('dddd, DD, YYYY')
@@ -46,7 +48,6 @@ console.log(currentTime)
 // saved task
 var savedTask = JSON.parse(localStorage.getItem("description"))
 
-function timeDisplay(){
 // for loop compares every hour
 for(let i=0; i< textAreas.length; i++){
   // start at 0 + 8 starts at 8 hour
@@ -61,5 +62,4 @@ for(let i=0; i< textAreas.length; i++){
   // loads the tasks, lets the value of the text are = saved tasks name
 textAreas[i].value = savedTask[i].name
 }
-}
-timeDisplay()
+})
