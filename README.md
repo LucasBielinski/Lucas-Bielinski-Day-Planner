@@ -16,6 +16,17 @@ The time sections change color based on the current time. To save your tasks, cl
 https://lucasbielinski.github.io/bielinski-planner/
 
 ## Credits
+
 N/A
+
 ## License
+
 N/A
+
+## How to Contribute
+
+For questions and contributions, you can reach me here:
+[Email](mailto:bielinskilucas@gmail.com)
+or
+[Github](https://github.com/LucasBielinski)
+
