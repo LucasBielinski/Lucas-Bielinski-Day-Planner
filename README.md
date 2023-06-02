@@ -13,7 +13,7 @@ N/A
 The time sections change color based on the current time. To save your tasks, click the save button before leaving the page. The current date is displayed at the top. 
 
 ![image of project](./assets/images/screen.png)
-https://lucasbielinski.github.io/bielinski-planner/
+https://lucasbielinski.github.io/Lucas-Bielinski-Day-Planner/
 
 ## Credits
 
